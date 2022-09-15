@@ -2,6 +2,9 @@
 *{
     background: #e2e2e2;
     font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #start-page{
@@ -21,7 +24,6 @@
     margin: auto;
     max-width: 100%;
     max-height: 100%;
-    overflow: auto;
 }
 
 .start-title{
@@ -35,12 +37,16 @@
 }
 
 /* button style */
+.start-btn{
+    margin-top: 24px;
+}
+
 a.btn{
     display: inline-block;
-    padding: 0.35em 1.2em;
-    border: 0.1em solid #f68eab;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
+    padding: 8px;
+    border: 3px solid #f68eab;
+    margin: 4px 0 4px 0;
+    border-radius: 20px;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 500;
@@ -57,7 +63,7 @@ a.btn:hover{
 
 /* making the button bounce*/
 .bouncy {
-  animation: bouncy 3s infinite linear;
+  animation: bouncy 3s infinite;
   position: relative;
   
 }

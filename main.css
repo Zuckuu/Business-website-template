@@ -1,91 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-*{
-    background: #e2e2e2;
-    font-family: 'Varela Round', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  background: #e2e2e2;
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
-
 
 /*Nav*/
-#nav{
-    box-shadow: 0px 3px 3px lightgray;
+#nav {
+  box-shadow: 0px 3px 3px lightgray;
 }
 
-.nav-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 24px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px;
 }
 
-.logo-container{
-    display: flex;
+.logo-container {
+  display: flex;
 }
 
-.logo{
-    position: relative;
-    top: -15px;
-    width: 70px;
+.logo {
+  position: relative;
+  top: -15px;
+  width: 70px;
 }
 
-.nav-name{
-    padding-left: 8px;
-    padding-top: 5px;
-    font-size: 24px;
-    color: #f68eab;
+.nav-name {
+  padding-left: 8px;
+  padding-top: 5px;
+  font-size: 24px;
+  color: #f68eab;
 }
 
-.nav-list{
-    display: flex;
+.nav-list {
+  display: flex;
 }
 
-.nav-list-item{
-    padding-left: 24px;
+.nav-list-item {
+  padding-left: 24px;
 }
 
 
-a.btn{
-    display: inline-block;
-    padding: 8px;
-    border: 3px solid #f68eab;
-    margin: 4px 0 4px 0;
-    border-radius: 20px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 500;
-    color: #f68eab;
-    text-align: center;
-    transition: all 0.2s;
-    font-size: 16px;
+.text-white {
+  color: white;
+  text-align: center;
+  margin: 4px 0 4px 0;
+  border-radius: 20px;
+  display: flex;
+  font-size: 24px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
 }
 
-a.btn:hover{
-    background-color: #f68eab;
-    color: #e2e2e2;
+a.btn {
+  display: inline-block;
+  padding: 8px;
+  border: 3px solid #f68eab;
+  margin: 4px 0 4px 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 500;
+  color: #f68eab;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+a.btn:hover {
+  background-color: #f68eab;
+  color: #e2e2e2;
 }
 
 /*Landing-page*/
-#landing-page{
-    margin: 300px 190px 0 190px;
+#landing-page {
+  margin: 300px 190px 0 190px;
 }
 
-.landing-title{
-    font-size: 64px;
-    color: #f68eab;
+.landing-title {
+  font-size: 64px;
+  color: #f68eab;
 }
 
-.color{
-    color: #9f9bbc;
+.color {
+  color: #9f9bbc;
 }
 
-.landing-des{
-    font-size: 24px;
-    color: #f68eab;
+.landing-des {
+  font-size: 24px;
+  color: #f68eab;
 }
 
 a.landing-link-item{
@@ -143,13 +154,32 @@ a.landing-link-item:hover{
   100% {
     transform: translateY(-3px);
   }
+
+}
+a.landing-link-item {
+  display: inline-block;
+  padding: 8px;
+  border: 3px solid #f68eab;
+  margin: 4px 0 4px 8px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 500;
+  color: #f68eab;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+a.landing-link-item:hover {
+  transform: scale(1.1);
+
 }
 
 /* making the button bounce*/
 .bouncy {
   animation: bouncy 3s infinite;
   position: relative;
-  
 }
 
 @keyframes bouncy {
@@ -173,5 +203,42 @@ a.landing-link-item:hover{
   }
   100% {
     top: 0em;
+  }
+}
+
+/* making the scroll*/
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #f68eab;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__icon:after {
+  content: "";
+  width: 4px;
+  height: 6px;
+  background-color: #f68eab;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(3px);
+  }
+  
+  100% {
+    transform: translateY(-3px);
   }
 }
